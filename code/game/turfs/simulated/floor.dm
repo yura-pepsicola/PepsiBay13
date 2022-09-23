@@ -24,6 +24,7 @@
 	thermal_conductivity = 0.040
 	heat_capacity = 10000
 	var/lava = 0
+	var/overrided_icon_state
 
 	height = -FLUID_SHALLOW / 2
 

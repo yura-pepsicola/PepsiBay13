@@ -110,6 +110,145 @@
 	throwforce = 15
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 
+/obj/item/stack/tile/dank
+	name = "grim floor tile"
+	singular_name = "grim floor tile"
+	desc = "A grim tile, supposedly ancient."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/dankroller
+	name = "grim roller floor tile"
+	singular_name = "grim roller floor tile"
+	desc = "Should theoretically help moving heavy objects. Should, if not for the scathing."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "roller"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/dankheavy
+	name = "grim heavy floor tile"
+	singular_name = "grim heavy floor tile"
+	desc = "Ancient but reinforced, might hold together unlike the rest of the ship."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank_heavy"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/dankheavy
+	name = "grim heavy floor tile"
+	singular_name = "grim heavy floor tile"
+	desc = "Ancient but reinforced, might hold together unlike the rest of the ship."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank_heavy"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/dankmedical
+	name = "grim medical tile"
+	singular_name = "grim medical tile"
+	desc = "These remind you of the asylum."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank_medical"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/dankmono
+	name = "grim tile"
+	singular_name = "grim tile"
+	desc = "Grimy but smooth."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank_mono"
+	force = 6
+	matter = list(MATERIAL_STEEL = 450)
+	throwforce = 15
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/bathroom
+	name = "bathroom floors"
+	singular_name = "bathroom floors"
+	desc = "Dark coloring for a dark job to do."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "dank_heavy"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/rivets
+	name = "rivet tile"
+	desc = "It keeps the ship together."
+	singular_name = "rivet tiles"
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "rivets_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/slashed
+	name = "slashed tile"
+	desc = "Robust plating to reinforce the edges of a room."
+	singular_name = "slashed tiles"
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "slashed_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+
+/obj/item/stack/tile/slashed/odd
+	name = "slashed tile"
+	desc = "Robust plating to reinforce the edges of a room."
+	singular_name = "slashed tiles"
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "slashed_odd_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+/obj/item/stack/tile/tramcorner
+	name = "tram floor"
+	desc = "Scuffed from the passage of countless tram users."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "rivets_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+
+/obj/item/stack/tile/trammiddle
+	name = "tram floor"
+	desc = "Scuffed from the passage of countless tram users."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "rivets_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+
+/obj/item/stack/tile/tramwarning
+	name = "tram floor"
+	desc = "Scuffed from the passage of countless tram users."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "rivets_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+
+/obj/item/stack/tile/tramgrating
+	name = "railway"
+	desc = "Scuffed from the countless tram uses."
+	icon = 'icons/turf/floors_ds13.dmi'
+	icon_state = "rivets_held"
+	matter = list(MATERIAL_STEEL = 450)
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+
+
 /obj/item/stack/tile/mono
 	name = "steel mono tile"
 	singular_name = "steel mono tile"
