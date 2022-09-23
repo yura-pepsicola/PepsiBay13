@@ -1346,3 +1346,224 @@ var/global/list/floor_decals = list()
 
 /obj/effect/floor_decal/stoneborder/corner
 	icon_state = "stoneborder_c"
+
+//ds13 variants
+
+/obj/effect/floor_decal/dank
+	name = "scratches"
+	icon = 'icons/turf/marks_ds13.dmi'
+	icon_state = "scratches"
+
+/obj/effect/floor_decal/dank/outline
+	name = "dark outline"
+	icon_state = "outline"
+	alpha = 220
+
+/obj/effect/floor_decal/dank/outline_striped
+	name = "dark striped outline"
+	icon_state = "outline_striped"
+	alpha = 220
+
+/obj/effect/floor_decal/dank/dent
+	name = "dent"
+	icon_state = "dent"
+
+/obj/effect/floor_decal/dank/dent_big
+	name = "dent"
+	icon_state = "dent_big"
+
+/obj/effect/floor_decal/dank/bent
+	name = "bent tile"
+	icon_state = "bent"
+
+/obj/effect/floor_decal/dank/bent2
+	name = "bent tile"
+	icon_state = "bent2"
+
+/obj/effect/floor_decal/dank/missing
+	name = "gap"
+	icon_state = "missing"
+
+/obj/effect/floor_decal/dank/single
+	name = "single tile"
+	icon_state = "single"
+
+/obj/effect/floor_decal/dank/single_mirrored
+	name = "single mirrored tile"
+	icon_state = "single_mirrored"
+
+/obj/effect/floor_decal/dank/double
+	name = "double tile"
+	icon_state = "double"
+
+/obj/effect/floor_decal/dank/border
+	name = "border"
+	icon_state = "border"
+
+/obj/effect/floor_decal/dank/border_corner
+	name = "border corner"
+	icon_state = "border_corner"
+
+/obj/effect/floor_decal/dank/border_corner_i
+	name = "border corner inverted"
+	icon_state = "border_corner_i"
+
+/obj/effect/floor_decal/dank/border_half
+	name = "half border"
+	icon_state = "border_half"
+
+/obj/effect/floor_decal/dank/border_corner_half
+	name = "half border corner"
+	icon_state = "border_corner_half"
+
+/obj/effect/floor_decal/dank/mono_half
+	name = "mono half"
+	icon_state = "mono_half"
+
+/obj/effect/floor_decal/dank/mono_corner
+	name = "mono corner"
+	icon_state = "mono_corner"
+
+/obj/effect/floor_decal/dank/mono_tri
+	name = "mono tri"
+	icon_state = "mono_tri"
+
+/obj/effect/floor_decal/dank/asylum_scratch
+	name = "asylum scratch"
+	icon_state = "asylum_scratch"
+
+/obj/effect/floor_decal/dank/slashed_border
+	name = "slashed border"
+	icon_state = "slashed_border"
+
+/obj/effect/floor_decal/dank/slats_start
+	name = "slats start"
+	icon_state = "slats_start"
+
+/obj/effect/floor_decal/dank/slats_end
+	name = "slats end"
+	icon_state = "slats_end"
+
+/obj/effect/floor_decal/dank/slats_start_c
+	name = "slats start curving"
+	icon_state = "slats_start_c"
+
+/obj/effect/floor_decal/dank/slats_end_c
+	name = "slats end curving"
+	icon_state = "slats_end_c"
+
+/obj/effect/floor_decal/dank/slats_start_c_r
+	name = "slats start curving reverse"
+	icon_state = "slats_start_c_r"
+
+/obj/effect/floor_decal/dank/slats_end_c_r
+	name = "slats end curving reverse"
+	icon_state = "slats_end_c_r"
+
+/obj/effect/floor_decal/dank/slats
+	name = "slats"
+	icon_state = "slats"
+
+/obj/effect/floor_decal/dank/slats_cs
+	name = "slats curving start"
+	icon_state = "slats_cs"
+
+/obj/effect/floor_decal/dank/slats_cs_r
+	name = "slats curving start reverse"
+	icon_state = "slats_cs_r"
+
+/obj/effect/floor_decal/dank/slats_ce
+	name = "slats curving end"
+	icon_state = "slats_ce"
+
+/obj/effect/floor_decal/dank/slats_ce_r
+	name = "slats curving end reverse"
+	icon_state = "slats_ce_r"
+
+/obj/effect/floor_decal/dank/slats_cc
+	name = "slats curving both ends"
+	icon_state = "slats_cc"
+
+/obj/effect/floor_decal/dank/slats_cc_r
+	name = "slats curving both ends reverse"
+	icon_state = "slats_cc_r"
+
+/obj/effect/floor_decal/dank/slats_corner
+	name = "slats corner"
+	icon_state = "slats_corner"
+
+/obj/effect/floor_decal/dank/slats_twist
+	name = "slats twisted"
+	icon_state = "slats_twist"
+
+/obj/effect/floor_decal/dank/slats_twist_r
+	name = "slats twisted reverse"
+	icon_state = "slats_twist_r"
+
+/obj/effect/floor_decal/dank/plastic_slab_s
+	name = "plastic slab small"
+	icon_state = "plastic_slab_s"
+
+/obj/effect/floor_decal/dank/plastic_slab_m
+	name = "plastic slab medium"
+	icon_state = "plastic_slab_m"
+
+/obj/effect/floor_decal/dank/plastic_slab_l
+	name = "plastic slab large"
+	icon_state = "plastic_slab_l"
+
+/obj/effect/floor_decal/dank/plastic_slab_xl
+	name = "plastic slab extra large"
+	icon_state = "plastic_slab_xl"
+
+// FLOOR UPDATE 2 : ELECTRIC BOOGALOO
+
+/obj/effect/floor_decal/dank/tech_nub
+	name = "tech nub"
+	icon_state = "tech_nub"
+
+/obj/effect/floor_decal/dank/tech_chip
+	name = "tech chip"
+	icon_state = "tech_chip"
+
+/obj/effect/floor_decal/dank/tech_duo
+	name = "tech duo"
+	icon_state = "tech_duo"
+
+/obj/effect/floor_decal/dank/grate
+	name = "grate"
+	icon_state = "grate"
+
+/obj/effect/floor_decal/dank/frame_small
+	name = "small frame"
+	icon_state = "frame"
+
+/obj/effect/floor_decal/dank/frame_tiled_small
+	name = "small frame with tiles"
+	icon_state = "frame_tiles"
+
+/obj/effect/floor_decal/dank/frame_medium
+	name = "medium frame"
+	icon_state = "frame"
+	icon = 'icons/turf/marks_48x48_ds13.dmi'
+
+/obj/effect/floor_decal/dank/frame_tiled_medium
+	name = "medium frame with tiles"
+	icon_state = "frame_tiles"
+	icon = 'icons/turf/marks_48x48_ds13.dmi'
+
+/obj/effect/floor_decal/dank/frame_large
+	name = "large frame"
+	icon_state = "frame"
+	icon = 'icons/turf/marks_96x96_ds13.dmi'
+
+/obj/effect/floor_decal/dank/frame_tiled_large
+	name = "large frame with tiles"
+	icon_state = "frame_tiles"
+	icon = 'icons/turf/marks_96x96_ds13.dmi'
+
+
+//DS13 Escape Pod floor
+/obj/effect/floor_decal/pod
+	name = "clear warning"
+	icon_state = "pod_clear"

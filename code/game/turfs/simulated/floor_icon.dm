@@ -20,6 +20,8 @@ var/global/list/flooring_cache = list()
 
 		if(flooring_override)
 			icon_state = flooring_override
+		else if(flooring_override)
+			icon_state = flooring_override
 		else
 			icon_state = flooring.icon_base
 			if(flooring.has_base_range)
