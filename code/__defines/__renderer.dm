@@ -162,6 +162,10 @@
 	#define HUD_ABOVE_ITEM_LAYER         4
 
 
+// Timing
+#define AMBIENT_MUSIC_COOLDOWN 2 MINUTES
+// TODO: Also add cooldown for ambients.
+
 //-------------------- Rendering ---------------------
 
 /// Semantics - The final compositor or a filter effect renderer

@@ -485,3 +485,23 @@
 
 		pct += delta
 		winset(src, "mainwindow.mainvsplit", "splitter=[pct]")
+
+
+
+/client/proc/play_ambience_music(file_path)
+
+	var/sound/S = sound(file_path, FALSE, FALSE, SOUND_CHANNEL_AMBIENT_MUSIC, VOLUME_AMBIENT_MUSIC)
+	S.echo = 0
+	S.environment = -1
+
+	last_time_ambient_music_played = world.time
+	DIRECT_OUTPUT(src, S)
+
+/client/proc/is_ambience_music_playing()
+	var/list/sounds = SoundQuery()
+
+	for(var/sound/S in sounds)
+		if(S.channel == SOUND_CHANNEL_AMBIENT_MUSIC)
+			return TRUE
+
+	return FALSE

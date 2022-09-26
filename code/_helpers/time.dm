@@ -220,3 +220,7 @@ var/global/round_start_time = 0
 	var/time_string = time2text(world.realtime, "MM-DD")
 	var/time_list = splittext(time_string, "-")
 	return list(text2num(time_list[1]), text2num(time_list[2]))
+
+#define THROTTLE(variable, delay) var/static/__throttle##variable=list(); var/##variable = FALSE; if(__throttle##variable["\ref[src]"] == null) {__throttle##variable["\ref[src]"] = world.time-delay-1} if(world.time > __throttle##variable["\ref[src]"] + delay) {__throttle##variable["\ref[src]"] = world.time; variable = TRUE} else{variable = FALSE}
+
+#define THROTTLE_SHARED(variable, delay, counter) var/##variable = (world.time > counter + delay); if(variable) {counter = world.time}
