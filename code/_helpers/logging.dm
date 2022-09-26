@@ -5,6 +5,8 @@
 
 var/global/log_end= world.system_type == UNIX ? ascii2text(13) : ""
 
+#define DIRECT_OUTPUT(A, B) A << B
+#define WRITE_FILE(file, text) DIRECT_OUTPUT(file, text)
 
 /proc/error(msg)
 	to_world_log("## ERROR: [msg][log_end]")

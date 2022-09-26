@@ -36,6 +36,23 @@
 #define ASTEROID CAVE
 #define SPACE UNDERWATER
 
+
+#define VOLUME_AMBIENT_MUSIC 50
+
+// Sound channels
+// TODO: Replace hardcoded values with these defines.
+#define SOUND_CHANNEL_AMBIENT       1
+#define SOUND_CHANNEL_AMBIENT_MUSIC 2
+#define SOUND_CHANNEL_HUM           3
+#define SOUND_CHANNEL_WEATHER       4
+
+// Ambient music tags
+#define MUSIC_TAG_NORMAL          0
+#define MUSIC_TAG_MYSTIC          1
+#define MUSIC_TAG_SPACE           2
+#define MUSIC_TAG_SPACE_TRAVELING 3
+#define MUSIC_TAG_CENTCOMM        4
+
 GLOBAL_LIST_INIT(shatter_sound,list('sound/effects/Glassbr1.ogg','sound/effects/Glassbr2.ogg','sound/effects/Glassbr3.ogg'))
 GLOBAL_LIST_INIT(explosion_sound,list('sound/effects/Explosion1.ogg','sound/effects/Explosion2.ogg'))
 GLOBAL_LIST_INIT(spark_sound,list('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg'))
@@ -63,6 +80,61 @@ GLOBAL_LIST_INIT(console_interact_sound, list('proxima/sound/machines/console/co
 GLOBAL_LIST_INIT(switch_small_sound, list('proxima/sound/effects/using/switch/small1.ogg','proxima/sound/effects/using/switch/small2.ogg'))
 GLOBAL_LIST_INIT(trauma_sound, list('sound/effects/gore/trauma1.ogg','sound/effects/gore/trauma2.ogg','sound/effects/gore/trauma3.ogg')) // end sounds from proxima
 
+// AMBIENT MUSIC
+GLOBAL_LIST_INIT(sfx_ambient_music, list(
+		'sound/ambient_music/normal_1.ogg',
+		'sound/ambient_music/normal_2.ogg',
+		'sound/ambient_music/normal_3.ogg',
+		'sound/ambient_music/normal_4.ogg',
+		'sound/ambient_music/normal_5.ogg',
+		'sound/ambient_music/normal_6.ogg',
+		'sound/ambient_music/normal_7.ogg',
+		'sound/ambient_music/normal_8.ogg',
+		'sound/ambient_music/normal_9.ogg',
+		'sound/ambient_music/normal_10.ogg',
+		'sound/ambient_music/normal_11.ogg',
+		'sound/ambient_music/normal_12.ogg',
+		'sound/ambient_music/normal_13.ogg',
+		'sound/ambient_music/normal_14.ogg',
+		'sound/ambient_music/normal_15.ogg',
+		'sound/ambient_music/normal_16.ogg',
+		'sound/ambient_music/normal_17.ogg',
+		'sound/ambient_music/normal_18.ogg',
+		'sound/ambient_music/normal_19.ogg',
+		'sound/ambient_music/normal_20.ogg',
+		'sound/ambient_music/normal_21.ogg',
+		'sound/ambient_music/normal_22.ogg',
+		'sound/ambient_music/normal_23.ogg',
+		'sound/ambient_music/normal_24.ogg',
+		'sound/ambient_music/normal_25.ogg',
+		'sound/ambient_music/mystic_1.ogg',
+		'sound/ambient_music/mystic_2.ogg',
+		'sound/ambient_music/mystic_3.ogg',
+		'sound/ambient_music/mystic_4.ogg',
+		'sound/ambient_music/mystic_5.ogg',
+		'sound/ambient_music/mystic_6.ogg',
+		'sound/ambient_music/mystic_7.ogg',
+		'sound/ambient_music/mystic_8.ogg',
+		'sound/ambient_music/mystic_9.ogg',
+		'sound/ambient_music/mystic_10.ogg',
+		'sound/ambient_music/mystic_11.ogg',
+		'sound/ambient_music/mystic_12.ogg',
+		'sound/ambient_music/mystic_13.ogg',
+		'sound/ambient_music/mystic_14.ogg',
+		'sound/ambient_music/mystic_15.ogg',
+		'sound/ambient_music/mystic_16.ogg',
+		'sound/ambient_music/mystic_17.ogg',
+		'sound/ambient_music/mystic_18.ogg',
+		'sound/ambient_music/mystic_19.ogg',
+		'sound/ambient_music/mystic_20.ogg',
+		'sound/ambient_music/mystic_21.ogg',
+		'sound/ambient_music/mystic_22.ogg',
+		'sound/ambient_music/mystic_23.ogg',
+		'sound/ambient_music/mystic_24.ogg',
+		'sound/ambient_music/mystic_25.ogg',
+		'sound/ambient_music/mystic_26.ogg',
+		'sound/ambient_music/mystic_27.ogg'
+))
 
 /proc/playsound(var/atom/source, soundin, vol as num, vary, extrarange as num, falloff, var/is_global, var/frequency, var/is_ambiance = 0)
 
