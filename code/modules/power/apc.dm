@@ -134,6 +134,7 @@
 	var/static/list/status_overlays_lighting
 	var/static/list/status_overlays_environ
 	var/autoname = 1
+	var/ambience_last_played
 
 /obj/machinery/power/apc/updateDialog()
 	if (stat & (BROKEN|MAINT))
@@ -981,6 +982,11 @@
 		update()
 	else if (last_ch != charging)
 		queue_icon_update()
+
+	var/static/list/electricsounds = list('sound/machines/electr1.ogg','sound/machines/electr2.ogg','sound/machines/electr3.ogg')
+	if(operating && world.time > ambience_last_played + 60 SECONDS && prob(0.5) && charging)
+		ambience_last_played = world.time
+		playsound(src.loc, pick(electricsounds),15,1,10, is_ambiance = 1)
 
 /obj/machinery/power/apc/proc/update_channels(suppress_alarms = FALSE)
 	// Allow the APC to operate as normal if the cell can charge

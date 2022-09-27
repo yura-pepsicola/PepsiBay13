@@ -359,6 +359,8 @@
 	opacity = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_hatch
 	paintable = AIRLOCK_STRIPABLE
+	open_sound_powered = 'sound/machines/maint_open.ogg'
+	close_sound_powered = 'sound/machines/maint_close.ogg'
 
 /obj/machinery/door/airlock/hatch/maintenance
 	name = "Maintenance Hatch"

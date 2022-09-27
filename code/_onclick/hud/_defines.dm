@@ -132,3 +132,6 @@
 #define ui_pai_shell "NORTH,WEST+2:6"
 #define ui_pai_light "NORTH,WEST+3:6"
 #define ui_pai_rest "NORTH,WEST+4:6"
+
+//hovertext
+#define ui_hovertext "CENTER-7, CENTER+7"
