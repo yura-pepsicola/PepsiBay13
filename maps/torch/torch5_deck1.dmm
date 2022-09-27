@@ -910,6 +910,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/structure/microscope,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "abU" = (
@@ -3201,13 +3202,13 @@
 	pixel_y = -32
 	},
 /obj/machinery/light/spot,
-/obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/structure/hospitaltech6,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "afE" = (
@@ -4737,6 +4738,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/woodenclock,
 /turf/simulated/floor/carpet,
 /area/medical/counselor/therapy)
 "air" = (
@@ -20387,6 +20389,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"jQK" = (
+/obj/effect/floor_decal/ventilator,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/cryo/aux)
 "jQY" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 8
@@ -47568,7 +47574,7 @@ aDY
 aDY
 aDY
 aHe
-aDY
+jQK
 aJP
 aDY
 aDY

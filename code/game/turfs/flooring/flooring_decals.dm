@@ -1348,7 +1348,10 @@ var/global/list/floor_decals = list()
 	icon_state = "stoneborder_c"
 
 //ds13 variants
-
+/obj/effect/floor_decal/ventilator
+	name = "ventfan"
+	icon = 'icons/obj/miscobjs.dmi'
+	icon_state = "vent"
 /obj/effect/floor_decal/dank
 	name = "scratches"
 	icon = 'icons/turf/marks_ds13.dmi'

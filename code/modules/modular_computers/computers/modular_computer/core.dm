@@ -14,7 +14,7 @@
 		os.Process()
 
 	var/static/list/beepsounds = list('sound/effects/compbeep1.ogg','sound/effects/compbeep2.ogg','sound/effects/compbeep3.ogg','sound/effects/compbeep4.ogg','sound/effects/compbeep5.ogg')
-	if(enabled && world.time > ambience_last_played + 60 SECONDS && prob(1))
+	if(enabled && world.time > ambience_last_played + 60 SECONDS && prob(2.5))
 		ambience_last_played = world.time
 		playsound(src.loc, pick(beepsounds),15,1,10, is_ambiance = 1)
 
