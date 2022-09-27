@@ -102,6 +102,9 @@
 	var/shock_stage
 
 	var/obj/item/grab/current_grab_type 	// What type of grab they use when they grab someone.
+	var/obj/screen/fov = null//The screen object because I can't figure out how the hell TG does their screen objects so I'm just using legacy code.
+	var/obj/screen/text/atm/hovertext = null //TODO
+	var/usefov = 1
 
 	var/list/descriptors
 
