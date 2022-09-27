@@ -715,6 +715,7 @@
 
 //Updates lying and icons
 /mob/proc/UpdateLyingBuckledAndVerbStatus()
+	var/oriDir = dir
 	if(!resting && cannot_stand() && can_stand_overridden())
 		lying = 0
 	else if(buckled)
@@ -749,6 +750,8 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
+	if(oriDir != dir)
+		update_vision_cone()
 
 /mob/proc/reset_layer()
 	if(lying)
@@ -764,6 +767,7 @@
 	if(buckled && buckled.buckle_movable)
 		buckled.set_dir(ndir)
 	SetMoveCooldown(movement_delay())
+	update_vision_cone()
 	return 1
 
 

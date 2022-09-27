@@ -779,6 +779,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	GLOB.stat_set_event.register(user, src, /obj/item/proc/unzoom)
 
 	user.visible_message("\The [user] peers through [zoomdevicename ? "the [zoomdevicename] of [src]" : "[src]"].")
+	if(ishuman(user))
+		var/mob/living/carbon/human/HM = user
+		HM.SetFov(0)
 
 /mob/living/proc/unzoom(var/obj/item/I)
 	if(I)
@@ -815,6 +818,9 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(istype(H))
 		H.handle_vision()
 	user.visible_message("[zoomdevicename ? "\The [user] looks up from [src]" : "\The [user] lowers [src]"].")
+	if(ishuman(user))
+		var/mob/living/carbon/human/HM = user
+		HM.SetFov(1)
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill
