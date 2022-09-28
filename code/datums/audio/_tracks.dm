@@ -311,3 +311,51 @@
 	author = "*Kira* Miki"
 	license = /decl/license/grandfathered
 	url = "https://ghyti.bandcamp.com/"
+
+/decl/audio/track/alienlobby1
+	display = "Far Frontier"
+	source = 'sound/music/alien/far_frontiers.ogg'
+	title = "Far Frontier" // lobbymus1
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby2
+	display = "Lost in Bluespace"
+	source = 'sound/music/alien/bluespace_anomaly.ogg'
+	title = "Lost in Bluespace" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby3
+	display = "Alien"
+	source = 'sound/music/alien/alien.ogg'
+	title = "Alien" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby4
+	display = "SEV Dispater"
+	source = 'sound/music/alien/dispater.ogg'
+	title = "SEV Dispater" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby5
+	display = "Last Days of Humanity"
+	source = 'sound/music/alien/last_days_of_humanity.ogg'
+	title = "Last Days of Humanity" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby6
+	display = "Aliens"
+	source = 'sound/music/alien/aliens.ogg'
+	title = "Aliens" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby7
+	display = "Corp"
+	source = 'sound/music/alien/corp.ogg'
+	title = "Corp" // lobbymus
+	license = /decl/license/grandfathered
+
+/decl/audio/track/alienlobby7
+	display = "Corp"
+	source = 'sound/music/alien/corp.ogg'
+	title = "Corp" // lobbymus
+	license = /decl/license/grandfathered
