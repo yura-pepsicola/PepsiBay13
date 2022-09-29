@@ -1,3 +1,9 @@
+/mob/proc/flash_weakest_pain()
+	flick("weakest_pain",pain)
+
+/mob/proc/flash_weak_pain()
+	flick("weak_pain",pain)
+
 /mob/proc/flash_pain(var/target)
 	if(pain)
 		animate(pain, alpha = target, time = 15, easing = ELASTIC_EASING)
@@ -23,6 +29,23 @@
 			adjustHalLoss(Ceil(power/2))
 
 	flash_pain(min(round(2*power)+55, 255))
+	//flash_weakest_pain()
+
+	/* var/actual_flash
+	actual_flash = power
+	switch(actual_flash)
+		if(1 to 50)
+			flash_weakest_pain()
+		if(50 to 90)
+			flash_weak_pain()
+			if(stuttering < 10)
+				stuttering += 5
+		if(90 to INFINITY)
+			flash_pain()
+			if(stuttering < 10)
+				stuttering += 10
+			if(prob(4))
+				shake_camera(src, 20, 3) */
 
 	// Anti message spam checks
 	if(force || (message != last_pain_message) || (world.time >= next_pain_time))

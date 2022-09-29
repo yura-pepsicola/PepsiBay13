@@ -161,6 +161,30 @@
 		using.alpha = ui_alpha
 		src.hotkeybuttons += using
 
+	if(hud_data.has_rest)
+		using = new /obj/screen()
+		using.SetName("rest")
+		using.icon = ui_style
+		using.icon_state = "act_rest[mymob.resting ? 1 : 0]"
+		using.screen_loc = ui_pull_rest
+		using.color = ui_color
+		using.alpha = ui_alpha
+		src.hotkeybuttons += using
+
+	mymob.jump_icon = new /obj/screen()
+	mymob.jump_icon.icon = ui_style
+	mymob.jump_icon.icon_state = "jump"
+	mymob.jump_icon.name = "jump"
+	mymob.jump_icon.screen_loc = ui_pull_rest
+	hud_elements |= mymob.jump_icon
+
+	mymob.fixeye = new /obj/screen()
+	mymob.fixeye.icon = ui_style
+	mymob.fixeye.icon_state = "fixeye"
+	mymob.fixeye.name = "fixeye"
+	mymob.fixeye.screen_loc = ui_fixeye
+	hud_elements |= mymob.fixeye
+
 	if(hud_data.has_throw)
 		mymob.throw_icon = new /obj/screen()
 		mymob.throw_icon.icon = ui_style

@@ -59,7 +59,9 @@
 	var/obj/screen/gun/move/gun_move_icon = null
 	var/obj/screen/gun/run/gun_run_icon = null
 	var/obj/screen/gun/mode/gun_setting_icon = null
-
+	var/obj/screen/jump_icon = null
+	var/obj/screen/fixeye = null
+	var/middle_click_intent = null //For doing different things with middle click.
 	var/obj/screen/movable/ability_master/ability_master = null
 
 	/*A bunch of this stuff really needs to go under their own defines instead of being globally attached to mob.
