@@ -5,6 +5,7 @@
 
 	lobby_screens = list('maps/example/lobby.png')
 	lobby_tracks = list(/decl/audio/track/absconditus)
+	lobby_transitions = 10 SECONDS
 
 	station_levels = list(1, 2, 3)
 	contact_levels = list(1, 2, 3)

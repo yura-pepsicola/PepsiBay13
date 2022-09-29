@@ -9978,27 +9978,27 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "vT" = (
 /obj/machinery/cryopod,
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo)
 "vU" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo)
 "vV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)

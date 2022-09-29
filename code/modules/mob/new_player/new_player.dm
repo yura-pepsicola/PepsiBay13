@@ -9,6 +9,7 @@
 	var/datum/browser/panel
 	var/show_invalid_jobs = 0
 	universal_speak = TRUE
+	hud_type = /datum/hud/new_player
 
 	invisibility = 101
 
@@ -25,7 +26,7 @@
 	..()
 	verbs += /mob/proc/toggle_antag_pool
 
-
+/*
 /mob/new_player/proc/new_player_panel(force)
 	if (!force && !SScharacter_setup.initialized)
 		return
@@ -62,7 +63,7 @@
 	panel.set_window_options("can_close=0")
 	panel.set_content(output.Join())
 	panel.open()
-
+*/
 
 /mob/new_player/Stat()
 	. = ..()
@@ -108,6 +109,7 @@
 		else
 			stat("Next Continue Vote:", "[max(round(transfer_controller.time_till_transfer_vote() / 600, 1), 0)] minutes")
 
+
 /mob/new_player/Topic(href, href_list) // This is a full override; does not call parent.
 	if (usr != src)
 		return TOPIC_NOACTION
@@ -129,9 +131,8 @@
 		ready = GAME_STATE > RUNLEVEL_LOBBY ? 0 : text2num(href_list["ready"])
 	if (href_list["refresh"])
 		panel.close()
-		if(client)
-			new_player_panel()
-
+		//if(client)
+			//new_player_panel()
 	if(href_list["observe"])
 		if(GAME_STATE < RUNLEVEL_LOBBY)
 			to_chat(src, "<span class='warning'>Пожалуйста, подождите загрузки сервера.</span>")
@@ -210,9 +211,70 @@
 		show_invalid_jobs = !show_invalid_jobs
 		LateChoices()
 
-	else if(!href_list["late_join"])
-		if(client)
-			new_player_panel()
+	//else if(!href_list["late_join"])
+		//if(client)
+			//new_player_panel()
+
+
+//Procs used in the new main menu (former hrefs)
+/mob/new_player/proc/observe(href, href_list)
+	if(GAME_STATE < RUNLEVEL_LOBBY)
+		to_chat(src, "<span class='warning'>Пожалуйста, подождите загрузки сервера.</span>")
+		return
+
+	if(!config.respawn_delay || client.holder || alert(src,"Вы уверены, что хотите наблюдать? Вам придется ждать [OBSERV_SPAWN_DELAY] минут прежде чем получить возможность респавна.","Player Setup","Да","Нет") == "Да")
+		if(!client) return 1
+
+		var/mob/observer/ghost/observer = new()
+
+		spawning = 1
+		sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = GLOB.lobby_sound_channel))// MAD JAMS cant last forever yo
+
+
+		observer.started_as_observer = 1
+		//close_spawn_windows()
+		var/obj/O = locate("landmark*Observer-Start")
+		if(istype(O))
+			to_chat(src, "<span class='notice'>Телепортация.</span>")
+			observer.forceMove(O.loc)
+		else
+			to_chat(src, "<span class='danger'>Не удалость обнаружить точку спавна наблюдателей. Используйте кнопку Teleport чтобы переместить к карте.</span>")
+		observer.timeofdeath = world.time // Set the time of death so that the respawn timer works correctly.
+
+		var/should_announce = client.get_preference_value(/datum/client_preference/announce_ghost_join) == GLOB.PREF_YES
+
+		if(isnull(client.holder) && should_announce)
+			announce_ghost_joinleave(src)
+
+		var/mob/living/carbon/human/dummy/mannequin = new()
+		client.prefs.dress_preview_mob(mannequin)
+		observer.set_appearance(mannequin)
+		qdel(mannequin)
+
+		observer.real_name = client.prefs.real_name
+		observer.SetName(observer.real_name)
+		if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
+			observer.verbs -= /mob/observer/ghost/verb/toggle_antagHUD        // Poor guys, don't know what they are missing!
+		observer.key = key
+		qdel(src)
+
+		return 1
+
+/mob/new_player/proc/join_game(href, href_list)
+	if(GAME_STATE != RUNLEVEL_GAME)
+		to_chat(usr, "<span class='warning'>The round is either not ready, or has already finished...</span>")
+		return
+	LateChoices() //show the latejoin job selection menu
+
+/mob/new_player/proc/setupcharacter(href, href_list)
+	client.prefs.open_setup_window(src)
+	return TRUE
+
+/mob/new_player/proc/ready(href, href_list)
+	if(GAME_STATE <= RUNLEVEL_LOBBY) // Make sure we don't ready up after the round has started
+		ready = text2num(ready())
+	else
+		ready = FALSE
 
 /mob/new_player/proc/AttemptLateSpawn(var/datum/job/job, var/spawning_at)
 

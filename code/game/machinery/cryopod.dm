@@ -458,6 +458,7 @@
 		to_chat(user, SPAN_WARNING("\The [target] isn't close enough."))
 		return
 	set_occupant(target)
+	playsound(src, 'sound/machines/cryoenter.ogg', 40)
 	if (user != target)
 		add_fingerprint(target)
 	log_and_message_admins("placed [target == user ? "themself" : key_name_admin(target)] into \a [src]")
@@ -543,12 +544,14 @@
 		set_occupant(usr)
 
 		src.add_fingerprint(usr)
+		playsound(src, 'sound/machines/cryoenter.ogg', 40)
 
 	return
 
 /obj/machinery/cryopod/proc/go_out()
 
 	if(!occupant)
+		playsound(src, 'sound/machines/button11.ogg', 40)
 		return
 
 	if(occupant.client)
@@ -556,6 +559,7 @@
 		occupant.client.perspective = MOB_PERSPECTIVE
 
 	occupant.dropInto(loc)
+	playsound(src, 'sound/machines/cryoexit.ogg', 40)
 	set_occupant(null)
 
 	icon_state = base_icon_state
