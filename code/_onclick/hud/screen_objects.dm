@@ -208,6 +208,11 @@
 			if(isliving(usr))
 				var/mob/living/L = usr
 				L.resist()
+		if("rest")
+			if(isliving(usr))
+				var/mob/living/L = usr
+				L.lay_down()
+				icon_state = "act_rest[L.resting ? 1 : 0]"
 
 		if("Reset Machine")
 			usr.unset_machine()
@@ -298,6 +303,19 @@
 		if("throw")
 			if(!usr.stat && isturf(usr.loc) && !usr.restrained())
 				usr:toggle_throw_mode()
+		if("jump")
+			if(usr.middle_click_intent == "jump")
+				usr.middle_click_intent = null
+				usr.jump_icon.icon_state = "jump"
+			else
+				usr.middle_click_intent = "jump"
+				usr.jump_icon.icon_state = "jump_on"
+		if("fixeye")
+			usr.face_direction()
+			if(usr.facing_dir)
+				usr.fixeye.icon_state = "fixeye_on"
+			else
+				usr.fixeye.icon_state = "fixeye"
 		if("drop")
 			if(usr.client)
 				usr.client.drop_item()

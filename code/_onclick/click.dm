@@ -275,18 +275,18 @@
 
 /*
 	Middle click
-	Only used for swapping hands
+	Only used for midclickintent
 */
+
 /mob/proc/MiddleClickOn(var/atom/A)
-	swap_hand()
+	//swap_hand()
+	A.MiddleClick(src)
 	return
 
 // In case of use break glass
-/*
 /atom/proc/MiddleClick(var/mob/M as mob)
+	middle_click_intent_check(M)
 	return
-*/
-
 /*
 	Shift click
 	For most mobs, examine.
@@ -446,3 +446,9 @@ GLOBAL_LIST_INIT(click_catchers, create_click_catcher())
 /obj/screen/click_catcher/proc/resolve(var/mob/user)
 	var/turf/T = screen_loc2turf(screen_loc, get_turf(user))
 	return T
+
+/atom/proc/middle_click_intent_check(var/mob/M)
+	if(M.middle_click_intent == "jump")
+		jump_act(src, M)
+	else
+		M.swap_hand()
