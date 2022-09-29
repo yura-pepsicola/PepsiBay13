@@ -229,6 +229,8 @@
 			to_chat(user, "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>")
 			return
 
+	var/old_loc = loc
+
 	if (istype(loc, /obj/item/storage))
 		var/obj/item/storage/S = loc
 		S.remove_from_storage(src)
@@ -249,17 +251,16 @@
 	pickup(user)
 
 
-	// if(user.put_in_active_hand(src))
-	// 	if (isturf(old_loc))
-	// 		var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
-	// 		ghost.animate_towards(user)
-	// 	if(randpixel)
-	// 		pixel_x = rand(-randpixel, randpixel)
-	// 		pixel_y = rand(-randpixel/2, randpixel/2)
-	// 		pixel_z = 0
-	// 	else if(randpixel == 0)
-	// 		pixel_x = 0
-	// 		pixel_y = 0
+	if(user.put_in_active_hand(src))
+		if (isturf(old_loc))
+			do_pickup_animation(user,old_loc)	//BastionStation edit - ports eris pickup animations
+		if(randpixel)
+			pixel_x = rand(-randpixel, randpixel)
+			pixel_y = rand(-randpixel/2, randpixel/2)
+			pixel_z = 0
+		else if(randpixel == 0)
+			pixel_x = 0
+			pixel_y = 0
 
 /obj/item/attack_ai(mob/user as mob)
 	if (istype(src.loc, /obj/item/robot_module))

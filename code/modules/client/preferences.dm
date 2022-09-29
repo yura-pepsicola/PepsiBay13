@@ -63,9 +63,9 @@
 			load_data()
 
 	sanitize_preferences()
-	if(client && istype(client.mob, /mob/new_player))
-		var/mob/new_player/np = client.mob
-		np.new_player_panel(TRUE)
+	//if(client && istype(client.mob, /mob/new_player))
+	//	var/mob/new_player/np = client.mob
+	//	np.new_player_panel(TRUE)
 
 /datum/preferences/proc/load_data()
 	load_failed = null
@@ -205,9 +205,9 @@
 		if (winget(usr, "preferences_browser", "is-visible") == "true")
 			open_setup_window(usr)
 
-		if (istype(client.mob, /mob/new_player))
-			var/mob/new_player/M = client.mob
-			M.new_player_panel()
+		//if (istype(client.mob, /mob/new_player))
+			//var/mob/new_player/M = client.mob
+			//M.new_player_panel()
 
 		if (href_list["details"])
 			return 1
